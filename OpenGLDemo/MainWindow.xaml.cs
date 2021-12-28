@@ -82,7 +82,7 @@ namespace OpenGLDemo
             InitializeComponent();
 
             model = new Model();
-            model.Import(@"C:\Programming\OpenGLDemo.1\cube.obj");
+            model.Import(@"rp_dennis_posed_004_100k.OBJ");
 
             maxExtension = new double[3]
                 {
@@ -108,7 +108,7 @@ namespace OpenGLDemo
             gl.Enable(OpenGL.GL_TEXTURE_2D);
             gl.Enable(OpenGL.GL_MULTISAMPLE);
             //gl.Enable(OpenGL.GL_LIGHTING);
-            //gl.Enable(OpenGL.GL_LIGHT0);
+            //gl.Enable(OpenGL.GL_LIGHT5);
             gl.ClearColor(0.3f, 0.3f, 0.3f, 0.3f);
         }
           
