@@ -7,13 +7,18 @@
         xmlns:local="clr-namespace:OpenGLDemo"
         mc:Ignorable="d"
         Height="800" Width="800"
-        Title="MainWindow" MouseMove="Mouse_Capture" ManipulationDelta="Mouse_Capture" KeyDown="Key_Capture">
+        Title="MainWindow" MouseMove="Mouse_Capture" KeyDown="Key_Capture">
     <Grid>
         <wpf:OpenGLControl OpenGLDraw="OpenGLControl_OpenGLDraw"
-                               OpenGLInitialized="OpenGLControl_OpenGLInitialized"
-                               Resized="OpenGLControl_Resized"
-                               DrawFPS="True"
-                               Loaded="OpenGLControl_Loaded" OpenGLVersion="OpenGL4_4" FrameRate="10000" IsManipulationEnabled="True" ForceCursor="False" RenderContextType="DIBSection"/>
+                           OpenGLInitialized="OpenGLControl_OpenGLInitialized"
+                           Resized="OpenGLControl_Resized"
+                           DrawFPS="True"
+                           Loaded="OpenGLControl_Loaded" 
+                           OpenGLVersion="OpenGL4_4" 
+                           FrameRate="10000" 
+                           IsManipulationEnabled="True" 
+                           ForceCursor="False" 
+                           RenderContextType="DIBSection"/>
     </Grid>
     
 </Window>

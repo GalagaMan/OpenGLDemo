@@ -28,7 +28,6 @@ using System.Runtime.InteropServices;
 
 namespace OpenGLDemo
 {
-
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
@@ -82,7 +81,7 @@ namespace OpenGLDemo
             InitializeComponent();
 
             model = new Model();
-            model.Import(@"rp_dennis_posed_004_100k.OBJ");
+            model.Import(@"cube.obj");
 
             maxExtension = new double[3]
                 {
@@ -97,7 +96,7 @@ namespace OpenGLDemo
         [DllImport("User32.dll")]
         private static extern bool SetCursorPos(int X, int Y);
 
-        private void OpenGLControl_OpenGLInitialized(object sender, OpenGLRoutedEventArgs args)
+        void OpenGLControl_OpenGLInitialized(object sender, OpenGLRoutedEventArgs args)
         {
             var gl = args.OpenGL;
             gl.Enable(OpenGL.GL_CULL_FACE);
@@ -107,8 +106,6 @@ namespace OpenGLDemo
             gl.Enable(OpenGL.GL_TEXTURE);
             gl.Enable(OpenGL.GL_TEXTURE_2D);
             gl.Enable(OpenGL.GL_MULTISAMPLE);
-            //gl.Enable(OpenGL.GL_LIGHTING);
-            //gl.Enable(OpenGL.GL_LIGHT5);
             gl.ClearColor(0.3f, 0.3f, 0.3f, 0.3f);
         }
           
@@ -340,21 +337,6 @@ namespace OpenGLDemo
             }
             else
                 Cursor = Cursors.Arrow;*/
-        }
-
-        private void Mouse_Capture(object sender, ManipulationDeltaEventArgs e)
-        {
-
-        }
-
-        private void OpenGLControl_OpenGLInitialized(object sender, EventArgs e)
-        {
-
-        }
-
-        private void OpenGLControl_OpenGLInitialized(object sender, SizeChangedEventArgs e)
-        {
-
         }
 
         private void OpenGLControl_Resized(object sender, OpenGLRoutedEventArgs args)

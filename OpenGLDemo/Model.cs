@@ -46,8 +46,8 @@ namespace OpenGLDemo
                             Vertices.Add(point);
                             break;
                         case "f":
-                           if (tokens.Length < 4)
-                               throw new Exception("wrong row format at flats: " + line);
+                           //if (tokens.Length < 4)
+                               //throw new Exception("wrong row format at flats: " + line);
                             var newFlat = new List<Vertex>();
                             for (int i = 1; i < tokens.Length; i++)
                             {
